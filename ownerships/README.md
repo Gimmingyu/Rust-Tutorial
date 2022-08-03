@@ -215,4 +215,3 @@ fn takes_and_gives_back(a_string: String) -> String { // a_string이 스코프
 
     a_string  // a_string은 반환되고, 호출한 쪽의 함수로 이동됩니다.
 }
-```
