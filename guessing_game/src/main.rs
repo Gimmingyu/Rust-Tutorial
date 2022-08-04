@@ -11,22 +11,21 @@ fn main() {
 
     loop {
         println!("Please input your guess.");
-    
+
         // mutable 변수 guess 선언.
         // new는 String 타입 연관 합수.
         // 연관 함수는 하나의 타입을 위한 함수.
         // 새로운 빈 String 인스턴스와 연결된 가변변수를 생성한다.
         let mut guess = String::new();
         // String 타입을 위한 함수라고 생각하면 된다.
-    
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read line");
-    
-            
+
+        io::stdin().read_line(&mut guess).expect("Failed to read line");
+
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue,
+            Err(_) => {
+                continue;
+            }
         };
 
         println!("You guessed: {}", guess);
@@ -37,6 +36,6 @@ fn main() {
                 println!("You win!");
                 break;
             }
-        };
+        }
     }
 }
