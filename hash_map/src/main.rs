@@ -15,7 +15,7 @@ fn main() {
     let teams = vec![String::from("Red"), String::from("Green")];
     let initial_score = vec![10, 50];
 
-    let scores: HashMap<_, _> = teams.iter().zip(initial_score.iter()).collect();
+    let scores: HashMap<&String, &i32> = teams.iter().zip(initial_score.iter()).collect();
     // collect()를 사용하면 다른 많은 데이터 구조로 바뀔 수가 있는데,
     // <_, _> 를 사용함으로써 벡터에 담긴 값으로 키와 값의 타입을 유추해서 해시 맵을 생성한다.
 

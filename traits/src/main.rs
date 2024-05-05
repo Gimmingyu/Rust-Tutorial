@@ -11,6 +11,7 @@ fn main() {
     };
     
     println!("1 new tweet: {}", tweet.summary());
+    println!("1 new tweet: {}", tweet.example());
 
     notify(tweet);
 }

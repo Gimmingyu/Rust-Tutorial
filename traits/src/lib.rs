@@ -23,12 +23,23 @@ impl Summarizable for Tweet {
     fn summary(&self) -> String {
         format!("{}: {}", self.username, self.content)
     }
+}
 
+impl Example for Tweet {
+    fn example(&self) -> String {
+        format!("{}: {}", self.username, self.content)
+    }
 }
 
 pub trait Summarizable {
     fn summary(&self) -> String;
     
+    // fn example(&self) -> String {
+    //     String::from("(Read more...)")
+    // }
+}
+
+pub trait Example {
     fn example(&self) -> String {
         String::from("(Read more...)")
     }
